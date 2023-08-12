@@ -1,0 +1,48 @@
+Первая часть первого  ДЗ  ))
+Linux terminal (GitBash) commands
+
+1) Посмотреть где я -                     pwd
+2) Создать папку -                        mkdir folder
+3) Зайти в папку-                         cd folder
+4) Создать 3 папки -                       mkdir f1 f2 f3
+5) Зайти в любоую папку-                            cd f2
+6) Создать 5 файлов (3 txt, 2 json) -                 touch names1.txt  touch names2.txt  touch names3.txt  touch users1.json  touch users2.json
+7) Создать 3 папки -                          mkdir qa1 qa2 qa3
+8. Вывести список содержимого папки -                ls -la
+9) + Открыть любой txt файл -                        cat names2.txt
+10) + написать туда что-нибудь, любой текст   -    cat > names2.txt Students 36 group
+                                                                    Students 36 group1
+                                                                    Students 36 group2
+                                                                    Students 36 group3
+                                                                 
+                                                                 
+
+11) + сохранить и выйти -                                           Ctrl C
+12) Выйти из папки на уровень выше  -                                 cd ..
+—
+13) переместить любые 2 файла, которые вы создали, в любую другую папку  -             mv f2/names3.txt f1/names3.txt        mv f2/names1.txt f1/names1.txt
+14) скопировать любые 2 файла, которые вы создали, в любую другую папку-                 cp f2/users1.json  f3/users1.json  cp f2/users2.json f3/users2.json
+15) Найти файл по имени-                                                                            find  -name names2.txt
+16) просмотреть содержимое в реальном времени (команда grep) изучите как она работает  -              tail -f names2.txt
+17) вывести несколько первых строк из текстового файла  -                                                head -n2 names2.txt
+18) вывести несколько последних строк из текстового файла  -                                                tail -n2 names2.txt
+19) просмотреть содержимое длинного файла (команда less) изучите как она работает  -                           less names2.txt
+20) вывести дату и время  -                                                                                       -date
+=========
+Задание *
+1) Отправить http запрос на сервер.
+http://162.55.220.72:5006/terminal-hw-request       curl "http://162.55.220.72:5005/get_method?name=Rustam&age=46"
+
+2) Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13
+
+vim script1.sh
+#!/bin/bash
+cd folder
+mkdir f1 f2 f3                                                                                                                      
+cd f2
+touch names1.txt names2.txt names3.txt users1.json users2.json
+mkdir qa1 qa2 qa3
+ls -la
+ mv names3.txt names1.txt ../f1
+
+bash script1.sh                                       
